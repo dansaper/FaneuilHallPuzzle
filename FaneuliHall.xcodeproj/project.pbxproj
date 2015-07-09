@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A9A50D7C1B4EC954007E17D8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9A50D7B1B4EC954007E17D8 /* main.cpp */; };
+		A9A50D841B4EC9BE007E17D8 /* immigrant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9A50D821B4EC9BE007E17D8 /* immigrant.cpp */; };
+		A9A50D871B4EC9C6007E17D8 /* judge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9A50D851B4EC9C6007E17D8 /* judge.cpp */; };
+		A9A50D8A1B4EC9D0007E17D8 /* spectator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9A50D881B4EC9D0007E17D8 /* spectator.cpp */; };
+		A9A50D8D1B4ECA9B007E17D8 /* visitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9A50D8B1B4ECA9B007E17D8 /* visitor.cpp */; };
+		A9A50D901B4ECD2E007E17D8 /* courthouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9A50D8E1B4ECD2E007E17D8 /* courthouse.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		A9A50D781B4EC954007E17D8 /* FaneuliHall */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FaneuliHall; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A50D7B1B4EC954007E17D8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A9A50D821B4EC9BE007E17D8 /* immigrant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = immigrant.cpp; sourceTree = "<group>"; };
+		A9A50D831B4EC9BE007E17D8 /* immigrant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = immigrant.h; sourceTree = "<group>"; };
+		A9A50D851B4EC9C6007E17D8 /* judge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = judge.cpp; sourceTree = "<group>"; };
+		A9A50D861B4EC9C6007E17D8 /* judge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = judge.h; sourceTree = "<group>"; };
+		A9A50D881B4EC9D0007E17D8 /* spectator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spectator.cpp; sourceTree = "<group>"; };
+		A9A50D891B4EC9D0007E17D8 /* spectator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spectator.h; sourceTree = "<group>"; };
+		A9A50D8B1B4ECA9B007E17D8 /* visitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = visitor.cpp; sourceTree = "<group>"; };
+		A9A50D8C1B4ECA9B007E17D8 /* visitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = visitor.h; sourceTree = "<group>"; };
+		A9A50D8E1B4ECD2E007E17D8 /* courthouse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = courthouse.cpp; sourceTree = "<group>"; };
+		A9A50D8F1B4ECD2E007E17D8 /* courthouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = courthouse.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				A9A50D7B1B4EC954007E17D8 /* main.cpp */,
+				A9A50D821B4EC9BE007E17D8 /* immigrant.cpp */,
+				A9A50D831B4EC9BE007E17D8 /* immigrant.h */,
+				A9A50D8B1B4ECA9B007E17D8 /* visitor.cpp */,
+				A9A50D8C1B4ECA9B007E17D8 /* visitor.h */,
+				A9A50D851B4EC9C6007E17D8 /* judge.cpp */,
+				A9A50D861B4EC9C6007E17D8 /* judge.h */,
+				A9A50D8E1B4ECD2E007E17D8 /* courthouse.cpp */,
+				A9A50D8F1B4ECD2E007E17D8 /* courthouse.h */,
+				A9A50D881B4EC9D0007E17D8 /* spectator.cpp */,
+				A9A50D891B4EC9D0007E17D8 /* spectator.h */,
 			);
 			path = FaneuliHall;
 			sourceTree = "<group>";
@@ -118,7 +143,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A50D8D1B4ECA9B007E17D8 /* visitor.cpp in Sources */,
+				A9A50D871B4EC9C6007E17D8 /* judge.cpp in Sources */,
+				A9A50D841B4EC9BE007E17D8 /* immigrant.cpp in Sources */,
 				A9A50D7C1B4EC954007E17D8 /* main.cpp in Sources */,
+				A9A50D901B4ECD2E007E17D8 /* courthouse.cpp in Sources */,
+				A9A50D8A1B4EC9D0007E17D8 /* spectator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +232,7 @@
 		A9A50D801B4EC954007E17D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1y";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +240,7 @@
 		A9A50D811B4EC954007E17D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1y";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
