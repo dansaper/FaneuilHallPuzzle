@@ -1,13 +1,13 @@
 //
 //  courthouse.h
-//  FaneuliHall
+//  FaneuilHall
 //
 //  Created by Daniel Saper on 7/9/15.
 //  Copyright (c) 2015 Daniel Saper. All rights reserved.
 //
 
-#ifndef __FaneuliHall__courthouse__
-#define __FaneuliHall__courthouse__
+#ifndef __FaneuilHall__courthouse__
+#define __FaneuilHall__courthouse__
 
 #include <iostream>
 #include <thread>
@@ -49,4 +49,4 @@ public:
 
 
 
-#endif /* defined(__FaneuliHall__courthouse__) */
+#endif /* defined(__FaneuilHall__courthouse__) */

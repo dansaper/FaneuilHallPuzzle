@@ -17,7 +17,7 @@
                BlueprintIdentifier = "A9A50D771B4EC954007E17D8"
                BuildableName = "FaneuliHall"
                BlueprintName = "FaneuliHall"
-               ReferencedContainer = "container:FaneuliHall.xcodeproj">
+               ReferencedContainer = "container:FaneuilHall.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "A9A50D771B4EC954007E17D8"
             BuildableName = "FaneuliHall"
             BlueprintName = "FaneuliHall"
-            ReferencedContainer = "container:FaneuliHall.xcodeproj">
+            ReferencedContainer = "container:FaneuilHall.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "A9A50D771B4EC954007E17D8"
             BuildableName = "FaneuliHall"
             BlueprintName = "FaneuliHall"
-            ReferencedContainer = "container:FaneuliHall.xcodeproj">
+            ReferencedContainer = "container:FaneuilHall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,7 +74,7 @@
             BlueprintIdentifier = "A9A50D771B4EC954007E17D8"
             BuildableName = "FaneuliHall"
             BlueprintName = "FaneuliHall"
-            ReferencedContainer = "container:FaneuliHall.xcodeproj">
+            ReferencedContainer = "container:FaneuilHall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

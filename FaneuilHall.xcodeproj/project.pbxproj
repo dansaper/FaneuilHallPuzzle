@@ -121,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9A50D731B4EC954007E17D8 /* Build configuration list for PBXProject "FaneuliHall" */;
+			buildConfigurationList = A9A50D731B4EC954007E17D8 /* Build configuration list for PBXProject "FaneuilHall" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -248,7 +248,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9A50D731B4EC954007E17D8 /* Build configuration list for PBXProject "FaneuliHall" */ = {
+		A9A50D731B4EC954007E17D8 /* Build configuration list for PBXProject "FaneuilHall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9A50D7D1B4EC954007E17D8 /* Debug */,
@@ -264,6 +264,7 @@
 				A9A50D811B4EC954007E17D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

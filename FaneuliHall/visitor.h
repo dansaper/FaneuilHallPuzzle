@@ -1,13 +1,13 @@
 //
 //  visitor.h
-//  FaneuliHall
+//  FaneuilHall
 //
 //  Created by Daniel Saper on 7/9/15.
 //  Copyright (c) 2015 Daniel Saper. All rights reserved.
 //
 
-#ifndef __FaneuliHall__visitor__
-#define __FaneuliHall__visitor__
+#ifndef __FaneuilHall__visitor__
+#define __FaneuilHall__visitor__
 
 #include <thread>
 #include <mutex>
@@ -24,4 +24,4 @@ public:
     
 };
 
-#endif /* defined(__FaneuliHall__visitor__) */
+#endif /* defined(__FaneuilHall__visitor__) */
