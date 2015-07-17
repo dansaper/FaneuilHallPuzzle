@@ -19,7 +19,7 @@
 class Spectator: public Visitor {
     
 public:
-    virtual void visit(std::shared_ptr<Courthouse>);
+    virtual void visit(std::shared_ptr<Courthouse>&);
     
     void enter();
     void spectate();

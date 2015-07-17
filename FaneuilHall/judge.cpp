@@ -8,8 +8,9 @@
 
 #include "judge.h"
 
-void Judge::visit(std::shared_ptr<Courthouse> c) {
+void Judge::visit(std::shared_ptr<Courthouse>& c) {
     courthouse = c;
+    std::this_thread::sleep_for(std::chrono::seconds(1));
     enter();
     confirm();
     leave();
@@ -20,17 +21,8 @@ void Judge::enter() {
 }
 
 void Judge::confirm() {
-    {
-        std::unique_lock<std::mutex> lk(courthouse->immigrantsMutex);
-        courthouse->immigrantsCv.wait(lk, [this](){
-            return courthouse->numImmigrantsToCheckIn == 0;});
-    }
-    {
-        std::lock_guard<std::mutex> lk(courthouse->judgeConfirmMutex);
-        courthouse->lockedOutput("Judge is confirming\n");
-        courthouse->judgeConfirmed = true;
-    }
-    courthouse->judgeConfirmCv.notify_all();
+    courthouse->judgeWaitForImmigrantsCheckIn();
+    courthouse->judgeConfirms();
 }
 
 void Judge::leave() {

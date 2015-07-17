@@ -16,12 +16,21 @@
 #include <condition_variable>
 
 class Courthouse {
+private:
     std::mutex judgeMutex;
     std::condition_variable judgeCv;
     bool hasJudge = false;
+    std::mutex outputMutex;
+
+    std::mutex immigrantsMutex;
+    std::condition_variable immigrantsCv;
+    int numImmigrantsToCheckIn = 0;
+    
+    std::mutex judgeConfirmMutex;
+    std::condition_variable judgeConfirmCv;
+    bool isJudgeConfirmed = false;
 public:
     
-    std::mutex outputMutex;
     
     void lockedOutput(std::string s) {
         std::lock_guard<std::mutex> lk(outputMutex);
@@ -31,20 +40,16 @@ public:
     
     void judgeEntered();
     void judgeLeft();
+    void judgeConfirms();
+    void judgeWaitForImmigrantsCheckIn();
 
-    std::mutex immigrantsMutex;
-    std::condition_variable immigrantsCv;
-    int numImmigrantsToCheckIn = 0;
-    
     bool immigrantArrived();
     void immigrantCheckedIn();
     void immigrantLeft();
+    bool immigrantGetCertificate();
     
     void spectatorArrived();
     
-    std::mutex judgeConfirmMutex;
-    std::condition_variable judgeConfirmCv;
-    bool judgeConfirmed = false;
 };
 
 

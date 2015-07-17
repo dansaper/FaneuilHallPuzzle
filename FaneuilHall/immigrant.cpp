@@ -8,7 +8,7 @@
 
 #include "immigrant.h"
 
-void Immigrant::visit(std::shared_ptr<Courthouse> c) {
+void Immigrant::visit(std::shared_ptr<Courthouse>& c) {
     courthouse = c;
     
     if (enter()) {
@@ -37,16 +37,12 @@ void Immigrant::swear() {
 }
 
 void Immigrant::getCertificate() {
+    if (courthouse->immigrantGetCertificate())
     {
-        std::unique_lock<std::mutex> lk(courthouse->judgeConfirmMutex);
-        
-        //Wait for judge to confirm. If too much time passes, assume no judge is coming and give up
-        if (courthouse->immigrantsCv.wait_for(lk, std::chrono::seconds(10), [this](){return courthouse->judgeConfirmed;})) {
-            courthouse->lockedOutput("Immigrant got certificate!\n");
-        }
-        else {
-            courthouse->lockedOutput("No Judge, so Immigrant is rejected!\n");
-        }
+        courthouse->lockedOutput("Immigrant got certificate!\n");
+    }
+    else {
+        courthouse->lockedOutput("No Judge, so Immigrant is rejected!\n");
     }
     
 }

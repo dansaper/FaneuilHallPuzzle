@@ -20,7 +20,7 @@ class Visitor {
 public:
     std::shared_ptr<Courthouse> courthouse;
     
-    virtual void visit(std::shared_ptr<Courthouse>) = 0;
+    virtual void visit(std::shared_ptr<Courthouse>&) = 0;
     
 };
 

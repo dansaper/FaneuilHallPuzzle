@@ -9,7 +9,7 @@
 #include "spectator.h"
 
 
-void Spectator::visit(std::shared_ptr<Courthouse> c) {
+void Spectator::visit(std::shared_ptr<Courthouse>& c) {
     courthouse = c;
     enter();
     spectate();

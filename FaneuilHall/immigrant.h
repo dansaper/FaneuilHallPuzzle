@@ -19,7 +19,7 @@
 class Immigrant: public Visitor {
     
 public:
-    virtual void visit(std::shared_ptr<Courthouse>);
+    virtual void visit(std::shared_ptr<Courthouse>&);
 
     bool enter();
     void checkIn();
