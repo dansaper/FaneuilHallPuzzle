@@ -10,9 +10,11 @@
 
 void Judge::visit(std::shared_ptr<Courthouse>& c) {
     courthouse = c;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    std::this_thread::sleep_for(std::chrono::milliseconds(delayEnter));
     enter();
+    std::this_thread::sleep_for(std::chrono::milliseconds(delayConfirm));
     confirm();
+    std::this_thread::sleep_for(std::chrono::milliseconds(delayLeave));
     leave();
 }
 

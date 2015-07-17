@@ -22,7 +22,7 @@ void Spectator::enter() {
 
 void Spectator::spectate() {
     courthouse->lockedOutput("Spectating\n");
-    std::this_thread::sleep_for(std::chrono::seconds(5));
+    // std::this_thread::sleep_for(std::chrono::seconds(5));
     courthouse->lockedOutput("Ending spectating\n");
 }
 

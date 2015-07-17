@@ -18,7 +18,15 @@
 
 class Judge: public Visitor {
     
-public:
+private:
+ 	int delayEnter = 0, delayConfirm = 0, delayLeave = 0;
+ public:
+	Judge()  {};
+	Judge(int dEnter, int dConfirm, int dLeave)  {
+		delayEnter =(dEnter);
+		delayConfirm =(dConfirm);
+		delayLeave= (dLeave);
+  	};
     virtual void visit(std::shared_ptr<Courthouse>&);
     
     void enter();

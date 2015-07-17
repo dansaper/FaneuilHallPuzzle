@@ -21,6 +21,7 @@ public:
     std::shared_ptr<Courthouse> courthouse;
     
     virtual void visit(std::shared_ptr<Courthouse>&) = 0;
+    // void WaitRandom(int maxMilli);
     
 };
 

@@ -14,21 +14,33 @@
 #include <string>
 #include <mutex>
 #include <condition_variable>
+#include <random>
+#include <chrono>
 
 class Courthouse {
 private:
     std::mutex judgeMutex;
     std::condition_variable judgeCv;
-    bool hasJudge = false;
     std::mutex outputMutex;
 
-    std::mutex immigrantsMutex;
-    std::condition_variable immigrantsCv;
+    std::mutex immigrantsCalculateMutex;    // used when calculating and comparing immigrant counts, numImmigrantsToCheckIn and numImmigrantsPresent
+
+    std::mutex immigrantsAllPresentMutex;
+    std::condition_variable immigrantsAllPresentCv;
+    // ** Why don't we use an atomic_integer for numImmigrantsToCheckIn?  We must be certain that the code used to increment and compare numImmigrantsToCheckIn is locked down.
     int numImmigrantsToCheckIn = 0;
     
-    std::mutex judgeConfirmMutex;
-    std::condition_variable judgeConfirmCv;
+    std::mutex judgeConfirmedMutex;
+    std::condition_variable judgeConfirmedCv;
     bool isJudgeConfirmed = false;
+
+    std::mutex immigrantsAndJudgeClearedMutex;  // used to block new immigrants from enetering after confirmation
+    std::condition_variable immigrantsAndJudgeClearedCv;
+    bool isImmigrantsAndJudgeCleared = true;    // set to false when the judge enters, true again when the courthouse is cleared
+    bool hasJudge = false;
+
+    // sßtd::atomic_int numImmigrantsPresent = 0;   // used to block new immigrants from enetering after confirmation, countdown from the number who checkedin to zero
+    int numImmigrantsPresent = 0;   // used to block new immigrants from enetering after confirmation, countdown from the number who checkedin to zero
 public:
     
     
